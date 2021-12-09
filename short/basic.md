@@ -1,6 +1,6 @@
 # java interview questions (basic)
 
-+ [1. What is Java? What are the features of Java?](#1-What-is-Java-What-are-the-features-of-Java)
++ [1. What is Java? What are the features of Java?](#1-what-is-java-what-are-features-of-java)
 
 ## 1 What is Java. What are features of Java.
 Java is a high-level programming language and is platform-independent.

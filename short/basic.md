@@ -1,7 +1,7 @@
 # java interview questions (basic)
 
 + [1. What is Java? What are the features of Java?](#1-what-is-java-what-are-features-of-java)
-+ [2. What are the OOPs concepts?](#1-what-are-the-oops-concepts)
++ [2. What are the OOPs concepts?](#2-what-are-the-oops-concepts)
 + [3. What are different access modifiers in Java?](#3-what-are-different-access-modifiers-in-java)
 + [4. What is the meaning of SOLID?](#4-what-is-the-meaning-of-solid)
 

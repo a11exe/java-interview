@@ -4,6 +4,9 @@
 + [2. What are the OOPs concepts?](#2-what-are-the-oops-concepts)
 + [3. What are different access modifiers in Java?](#3-what-are-different-access-modifiers-in-java)
 + [4. What is the meaning of SOLID?](#4-what-is-the-meaning-of-solid)
++ [5. What are primitive data types?](#5-what-are-primitive-data-types)
++ [6. Order of execution of Initialization blocks and Constructors in Java](#6-order-of-execution-of-initialization-blocks-and-constructors-in-java)
++ [7. Differences between Lambda Expressions and Closures in Java?](#7-differences-between-lambda-expressions-and-closures-in-java)
 
 ## 1 What is Java. What are features of Java.
 Java is a high-level programming language and is platform-independent.
@@ -59,3 +62,27 @@ You go to a local store to buy something, and you decide to pay for it by using 
 So, when you give your card to the clerk for making the payment, 
 the clerk doesn’t bother to check what kind of card you have given.
 The type of credit card or debit card that you have for paying does not even matter; they will simply swipe it.
+
+## 5 What are primitive data types
+
++ byte - 1 byte (8 bits). Min -2^7 Max 2^7-1
++ short - 2 byte (16 bits). Min -2^15 Max 2^15-1
++ char - 2 byte (16 bits). 2^16-1
++ int - 4 byte (32 bits). Min -2^31-1 Max 2^31
++ long - 8 byte (64 bits). Min -2^63-1 Max 2^63
++ float - 4 byte (32 bits). Min -2^31-1 Max 2^31
++ double - 8 byte (64 bits). Min -2^63-1 Max 2^63
++ boolean - NA usualy 1 byte
+
+## 6 Order of execution of Initialization blocks and Constructors in Java
+
++ Static initialization blocks will run whenever the class is loaded first time in JVM
++ Initialization blocks run in the same order in which they appear in the program.
++ Instance Initialization blocks are executed whenever the class is initialized and before constructors are invoked. 
+They are typically placed above the constructors within braces.
+
+## 7 Differences between Lambda Expressions and Closures in Java
+Java supports lambda expressions but not the Closures. 
+A lambda expression is an anonymous function and can be defined as a parameter. 
+The Closures are like code fragments or code blocks that can be used without being a method or a class. 
+It means that Closures can access variables not defined in its parameter list and also assign it to a variable.

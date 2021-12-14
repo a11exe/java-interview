@@ -8,7 +8,7 @@
 + [6. Order of execution of Initialization blocks and Constructors in Java](#6-order-of-execution-of-initialization-blocks-and-constructors-in-java)
 + [7. Differences between Lambda Expressions and Closures in Java?](#7-differences-between-lambda-expressions-and-closures-in-java)
 
-## 1 What is Java. What are features of Java.
+## 1. What is Java. What are features of Java.
 Java is a high-level programming language and is platform-independent.
 + Java is also an object-oriented language. However, everything (except fundamental types) is an object in Java
 + Platform independent: A single program works on different platforms without any modification.
@@ -19,7 +19,9 @@ JIT converts the bytecode into machine language and then JVM starts the executio
 + Secured: Java is secured because it doesn't use explicit pointers.
 + Java is a strong programming language as it uses strong memory management. The concepts like Automatic garbage collection.
 
-## 2 What are the OOPs concepts
+[back to the table of contents](#java-interview-questions-basic)
+
+## 2. What are the OOPs concepts
 OOPs concepts include:
 + **Inheritance** 
     + Inheritance means one class can extend to another class. 
@@ -41,13 +43,17 @@ OOPs concepts include:
     + Multiple inheritances cannot be achieved in java. To overcome this problem the Interface concept is introduced.
    An interface is a template which has only method declarations and not the method implementation.
    
-## 3 What are different access modifiers in Java
+[back to the table of contents](#java-interview-questions-basic)
+   
+## 3. What are different access modifiers in Java
 + **Default** access modifier is without any access specifier data members, class and methods, and are accessible within the same package.
 + **Private** access modifiers are marked with the keyword private, and are accessible only within class, and not even accessible by class from the same package.
 + **Protected** access modifiers can be accessible within the same package or subclasses from different packages.
 + **Public** access modifiers are accessible from everywhere.
 
-## 4 What is the meaning of SOLID
+[back to the table of contents](#java-interview-questions-basic)
+
+## 4. What is the meaning of SOLID
 Solid represents five principles of java which are:
 
 + **S**: Single responsibility principle. One class should have only one and only responsibility.
@@ -63,7 +69,9 @@ So, when you give your card to the clerk for making the payment,
 the clerk doesn’t bother to check what kind of card you have given.
 The type of credit card or debit card that you have for paying does not even matter; they will simply swipe it.
 
-## 5 What are primitive data types
+[back to the table of contents](#java-interview-questions-basic)
+
+## 5. What are primitive data types
 
 + byte - 1 byte (8 bits). Min -2^7 Max 2^7-1
 + short - 2 byte (16 bits). Min -2^15 Max 2^15-1
@@ -74,15 +82,21 @@ The type of credit card or debit card that you have for paying does not even mat
 + double - 8 byte (64 bits). Min -2^63-1 Max 2^63
 + boolean - NA usualy 1 byte
 
-## 6 Order of execution of Initialization blocks and Constructors in Java
+[back to the table of contents](#java-interview-questions-basic)
+
+## 6. Order of execution of Initialization blocks and Constructors in Java
 
 + Static initialization blocks will run whenever the class is loaded first time in JVM
 + Initialization blocks run in the same order in which they appear in the program.
 + Instance Initialization blocks are executed whenever the class is initialized and before constructors are invoked. 
 They are typically placed above the constructors within braces.
 
-## 7 Differences between Lambda Expressions and Closures in Java
+[back to the table of contents](#java-interview-questions-basic)
+
+## 7. Differences between Lambda Expressions and Closures in Java
 Java supports lambda expressions but not the Closures. 
 A lambda expression is an anonymous function and can be defined as a parameter. 
 The Closures are like code fragments or code blocks that can be used without being a method or a class. 
 It means that Closures can access variables not defined in its parameter list and also assign it to a variable.
+
+[back to the table of contents](#java-interview-questions-basic)

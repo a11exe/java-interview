@@ -11,7 +11,7 @@
 + [9. What is the difference between atomic, volatile, synchronized?](#9-what-is-the-difference-between-atomic-volatile-synchronized)
 + [10. Explain object finalization](#10-explain-object-finalization)
 + [11. Describe the Collections Type Hierarchy. What Are the Main Interfaces, and What Are the Differences Between Them?](#11-describe-the-collections-type-hierarchy-what-are-the-main-interfaces-and-what-are-the-differences-between-them)
-+ [12. Describe Various Implementations of the Map Interface and Their Use Case Differences.](#12-describe-various-implementations-of-the-map-interface-and-their-use-case-differences.)
++ [12. Describe Various Implementations of the Map Interface and Their Use Case Differences.](#12-describe-various-implementations-of-the-map-interface-and-their-use-case-differences)
 + [13. Explain the Difference Between Linkedlist and Arraylist.](#13-explain-the-difference-between-linkedlist-and-arraylist)
 + [14. What Is the Difference Between Hashset and Treeset?](#14-what-is-the-difference-between-hashset-and-treeset)
 + [15. How Is Hashmap Implemented in Java?](#15-how-is-hashmap-implemented-in-java)
@@ -20,7 +20,7 @@
 + [18. What Is the Difference Between Fail-Fast and Fail-Safe Iterators?](#18-what-is-the-difference-between-fail-fast-and-fail-safe-iterators)
 + [19. How Can You Use Comparable and Comparator Interfaces to Sort Collections?](#19-how-can-you-use-comparable-and-comparator-interfaces-to-sort-collections)
 + [20. What is Serialization in Java?](#20-what-is-serialization-in-java)
-+ [21. Concept Of Java Cloning](#21-concept-of-java-cloning)
++ [21. Concept of Java Cloning](#21-concept-of-java-cloning)
 
 ## 1. What is Java. What are features of Java?
 Java is a high-level programming language and is platform-independent.
@@ -33,7 +33,7 @@ JIT converts the bytecode into machine language and then JVM starts the executio
 + Secured: Java is secured because it doesn't use explicit pointers.
 + Java is a strong programming language as it uses strong memory management. The concepts like Automatic garbage collection.
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
 
 ## 2. What are the OOPs concepts?
 OOPs concepts include:
@@ -57,7 +57,7 @@ OOPs concepts include:
     + Multiple inheritances cannot be achieved in java. To overcome this problem the Interface concept is introduced.
    An interface is a template which has only method declarations and not the method implementation.
    
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
    
 ## 3. What are different access modifiers in Java?
 + **Default** access modifier is without any access specifier data members, class and methods, and are accessible within the same package.
@@ -65,7 +65,7 @@ OOPs concepts include:
 + **Protected** access modifiers can be accessible within the same package or subclasses from different packages.
 + **Public** access modifiers are accessible from everywhere.
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
 
 ## 4. What is the meaning of SOLID?
 Solid represents five principles of java which are:
@@ -83,7 +83,7 @@ So, when you give your card to the clerk for making the payment,
 the clerk doesn’t bother to check what kind of card you have given.
 The type of credit card or debit card that you have for paying does not even matter; they will simply swipe it.
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
 
 ## 5. What are primitive data types?
 
@@ -96,7 +96,7 @@ The type of credit card or debit card that you have for paying does not even mat
 + double - 8 byte (64 bits). Min -2^63-1 Max 2^63
 + boolean - NA usualy 1 byte
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
 
 ## 6. Order of execution of Initialization blocks and Constructors in Java.
 
@@ -105,7 +105,7 @@ The type of credit card or debit card that you have for paying does not even mat
 + Instance Initialization blocks are executed whenever the class is initialized and before constructors are invoked. 
 They are typically placed above the constructors within braces.
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
 
 ## 7. Differences between Lambda Expressions and Closures in Java.
 Java supports lambda expressions but not the Closures. 
@@ -113,7 +113,7 @@ A lambda expression is an anonymous function and can be defined as a parameter.
 The Closures are like code fragments or code blocks that can be used without being a method or a class. 
 It means that Closures can access variables not defined in its parameter list and also assign it to a variable.
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
 
 ## 8. Give the list of Java Object class methods.
 
@@ -129,7 +129,7 @@ no more references to the object.
 + wait() - Causes current thread to wait until another thread invokes the notify() method 
 or the notifyAll() method for this object.
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
 
 ## 9. What is the difference between atomic, volatile, synchronized?
 
@@ -172,7 +172,7 @@ This means that a synchronized method (or block) can be executing in multiple th
 locking on different objects, but only one thread can execute a synchronized method (or block) 
 at a time for any given single object.
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
 
 ## 10. Explain object finalization
 
@@ -180,7 +180,7 @@ Called by the garbage collector on an object when garbage collection determines 
 there are no more references to the object. If an object can not be accessed from any live object, 
 this means that it can be safely garbage collected.
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
 
 ## 11. Describe the Collections Type Hierarchy. What Are the Main Interfaces, and What Are the Differences Between Them?
 
@@ -198,7 +198,7 @@ This is by design, to stress the difference between collections and mappings whi
 under a common abstraction. The Map interface represents a key-value data structure with unique keys and no more 
 than one value for each key.
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
 
 ## 12. Describe Various Implementations of the Map Interface and Their Use Case Differences.
 
@@ -220,7 +220,7 @@ The **Hashtable** class has been in Java since version 1.0. It is not deprecated
 It is a thread-safe hash map, but unlike ConcurrentHashMap, all its methods are simply synchronized, 
 which means that all operations on this map block, even retrieval of independent values.
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
 
 ## 13. Explain the Difference Between Linkedlist and Arraylist.
 
@@ -240,7 +240,7 @@ It can even appear faster than the LinkedList‘s O(1) insertion which requires 
 multiple references under the hood. LinkedList also can have a large memory overhead due to a creation 
 of multiple small Node objects.
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
 
 ## 14. What Is the Difference Between Hashset and Treeset?
 
@@ -253,7 +253,7 @@ which defines their properties: HashSet does not keep elements in any particular
 Iteration over the elements in a HashSet produces them in a shuffled order. 
 TreeSet, on the other hand, produces elements in order according to some predefined Comparator.
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
 
 ## 15. How Is Hashmap Implemented in Java?
 
@@ -284,7 +284,7 @@ When the HashMap internal array is filled (more on that in the next question),
 it is automatically resized to be twice as large. This operation infers rehashing (rebuilding of internal data structures), 
 which is costly, so you should plan the size of your HashMap beforehand.
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
 
 ## 16. What Is the Purpose of the Initial Capacity and Load Factor Parameters of a Hashmap?
 
@@ -307,7 +307,7 @@ Consequently, it is not trivial to come up with initialCapacity that satisfies y
 This is why the Guava library has Maps.newHashMapWithExpectedSize() and Sets.newHashSetWithExpectedSize() methods 
 that allow you to build a HashMap or a HashSet that can hold the expected number of elements without resizing.
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
 
 ## 17. Describe Special Collections for Enums.
 
@@ -320,7 +320,7 @@ in the vector is a “one”, which is a very easy operation.
 Similarly, an EnumMap is an array accessed with enum's ordinal value as an index. In the case of EnumMap, 
 there is no need to calculate hash codes or resolve collisions.
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
 
 ## 18. What Is the Difference Between Fail-Fast and Fail-Safe Iterators?
 
@@ -337,7 +337,7 @@ create a copy of the structure they iterate upon.
 They guarantee safety from concurrent modifications. Their drawbacks include excessive memory consumption and iteration 
 over possibly out-of-date data in case the collection was modified.
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
 
 ## 19. How Can You Use Comparable and Comparator Interfaces to Sort Collections?
 
@@ -360,7 +360,7 @@ You simply create an implementing class and define the compare method which rece
 two objects and decides how to order them. You may then use the instance of this class to override the natural ordering 
 of the Collections.sort() method or SortedSet and SortedMap instances.
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
 
 ## 20. What is Serialization in Java?
 
@@ -389,7 +389,7 @@ To avoid serialization some variable, you can mark that variable as either stati
 Externalizable interface has more control over serialization process and it is mandatory 
 to override writeExternal and readExternal.
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)
 
 ## 21. Concept Of Java Cloning
 
@@ -407,4 +407,4 @@ One solution is to simply implement your own custom method (e.g., deepCopy()) th
 a deep copy of an instance of one of your classes. 
 Other common solution to the deep copy problem is to use Java Object Serialization.
 
-[back to the table of contents](#java-interview-questions-basic)
+[back to the table of contents](#basic-java-interview-questions)

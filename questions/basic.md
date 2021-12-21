@@ -21,6 +21,15 @@
 + [19. How Can You Use Comparable and Comparator Interfaces to Sort Collections?](#19-how-can-you-use-comparable-and-comparator-interfaces-to-sort-collections)
 + [20. What is Serialization in Java?](#20-what-is-serialization-in-java)
 + [21. Concept of Java Cloning](#21-concept-of-java-cloning)
++ [22. StringBuffer vs StringBuilder](#22-stringbuffer-vs-stringbuilder)
++ [23. Name some of the parsers which are commonly used to parse XML documents](#23-name-some-of-the-parsers-which-are-commonly-used-to-parse-xml-documents)
++ [24. What New Features Were Added in Java 8?](#24-what-new-features-were-added-in-java-8)
++ [25. What New Features Were Added in Java 11?](#25-what-new-features-were-added-in-java-11)
++ [26. What Is a Lambda Expression and What Is It Used For?](#26-what-is-a-lambda-expression-and-what-is-it-used-for)
++ [27. What Is an Exception?](#27-what-is-an-exception)
++ [28. How to Generate OutOfMemoryError and StackOverflowException?](#28-how-to-generate-outofmemoryerror-and-stackoverflowexception)
++ [29. What Are Annotations? What Are Their Typical Use Cases?](#29-what-are-annotations-what-are-their-typical-use-cases)
++ [30. What is immutable class?](#30-what-is-immutable-class)
 
 ## 1. What is Java. What are features of Java?
 Java is a high-level programming language and is platform-independent.
@@ -144,13 +153,13 @@ for the variable. The compiler cannot optimize away any references made to the v
 This guarantees that when one thread modifies the variable, all other threads see the new value immediately.
 
 **AtomicInteger** 
-<pre>
+```java
 private AtomicInteger counter = new AtomicInteger();
 
 public int getNextUniqueIndex() {
   return counter.getAndIncrement();
 }
-</pre>
+```
 The AtomicInteger class uses CAS (compare-and-swap) low-level CPU operations (no synchronization needed!) 
 Declaring an atomic variable guarantees that operations made on the variable occur in an atomic fashion, 
 i.e., that all of the substeps of the operation are completed within the thread they are executed and 
@@ -406,5 +415,160 @@ When a deep copy of the object is done new references are created.
 One solution is to simply implement your own custom method (e.g., deepCopy()) that returns 
 a deep copy of an instance of one of your classes. 
 Other common solution to the deep copy problem is to use Java Object Serialization.
+
+[back to the table of contents](#basic-java-interview-questions)
+
+## 22. StringBuffer vs StringBuilder
+
+StringBuffer is synchronized, StringBuilder is not. 
+StringBuilder is faster than StringBuffer because it's not synchronized.
+
+[back to the table of contents](#basic-java-interview-questions)
+
+## 23. Name some of the parsers which are commonly used to parse XML documents.
+
++ **Dom** Parser - Parses the document by loading the complete contents of the document and creating its complete 
+hiearchical tree in memory. Using DOM parser, we can parse, modify or create a XML document.                           
++ **SAX** Parser - Parses the document on event based triggers. 
+Does not load the complete document into the memory. You are processing a very large XML document 
+whose DOM tree would consume too much memory. We have no random access to an XML document since it is processed 
+in a forward-only manner. Using SAX parser, we can only parse or modify a XML document.
++ **StAX** Parser - Parses the document in similar fashion to SAX parser does,
+but StAX is a PULL API where as SAX is a PUSH API. It means in case of StAX parser, 
+client application need to ask StAX parser to get information from XML whenever 
+it needs but in case of SAX parser, client application is required to get information 
+when SAX parser notifies the client application that information is available.
+Using StAX parser, we can parse, modify and create a XML document.
+
+[back to the table of contents](#basic-java-interview-questions)
+
+## 24. What New Features Were Added in Java 8?
+
+Java 8 ships with several new features, but the most significant are the following:
+
++ Lambda Expressions − a new language feature allowing us to treat actions as objects
++ Method References − enable us to define Lambda Expressions by referring to methods directly using their names
++ Optional − special wrapper class used for expressing optionality
++ Functional Interface – an interface with maximum one abstract method; implementation can be provided using a Lambda Expression
++ Default methods − give us the ability to add full implementations in interfaces besides abstract methods
++ Nashorn, JavaScript Engine − Java-based engine for executing and evaluating JavaScript code
++ Stream API − a special iterator class that allows us to process collections of objects in a functional manner
++ Date API − an improved, immutable JodaTime-inspired Date API
+
+[back to the table of contents](#basic-java-interview-questions)
+
+## 25. What New Features Were Added in Java 11?
+
+Java 11 ships with several new features, but the most significant are the following:
+
++ New methods to the String class: isBlank, lines, strip, stripLeading, stripTrailing, and repeat.
++ New File Methods − readString and writeString static methods from the Files class.
++ The new HTTP client − improves overall performance and provides support for both HTTP/1.1 and HTTP/2
++ Modular System – since Java 9
+
+[back to the table of contents](#basic-java-interview-questions)
+
+## 26. What Is a Lambda Expression and What Is It Used For?
+
+In very simple terms, a lambda expression is a function that we can reference and pass around as an object.
+
+Moreover, lambda expressions introduce functional style processing in Java, and facilitate 
+the writing of compact and easy-to-read code.
+
+As a result, lambda expressions are a natural replacement for anonymous classes such as method arguments. 
+One of their main uses is to define inline implementations of functional interfaces.
+
+[back to the table of contents](#basic-java-interview-questions)
+
+## 27. What Is an Exception?
+
+An exception is an abnormal event that occurs during the execution of a program 
+and disrupts the normal flow of the program's instructions.
+The throws keyword is used to specify that a method may raise an exception during its execution.
+The throw keyword allows us to throw an exception object to interrupt the normal flow of the program.
+We can handle exception by using a try-catch-finally statement.
+The block of code in which an exception may occur is enclosed in a try block. This block is also called “protected” or “guarded” code.
+If an exception occurs, the catch block that matches the exception being thrown is executed, if not, all catch blocks are ignored.
+The finally block is always executed after the try block exits, whether an exception was thrown or not inside it.
+A checked exception must be handled within a try-catch block or declared in a throws clause; 
+whereas an unchecked exception is not required to be handled nor declared.
+An exception is an event that represents a condition from which is possible to recover, 
+whereas error represents an external situation usually impossible to recover from.
+
+[back to the table of contents](#basic-java-interview-questions)
+
+## 28. How to Generate OutOfMemoryError and StackOverflowException?
+
+OutOfMemoryError
+```java
+List<long[]> list = new LinkedList<long[]>();
+while (true) {
+  list.add(new long[65536]); // an arbitrary number
+  // sleep(1) perhaps?
+}
+```
+StackOverflowException
+```java
+public class StackOverflowErrorExample {
+
+    public static void recursivePrint(int num) {
+        System.out.println("Number: " + num);
+
+        if(num == 0)
+            return;
+        else
+            recursivePrint(++num);
+    }
+
+    public static void main(String[] args) {
+        StackOverflowErrorExample.recursivePrint(1);
+    }
+}
+```
+[back to the table of contents](#basic-java-interview-questions)
+
+## 29. What Are Annotations? What Are Their Typical Use Cases?
+
+Annotations are metadata bound to elements of the source code of a program and have no effect on the operation of the code they operate.
+
+Their typical uses cases are:
++ Information for the compiler – with annotations, the compiler can detect errors or suppress warnings
++ Compile-time and deployment-time processing – software tools can process annotations and generate code, configuration files, etc.
++ Runtime processing – annotations can be examined at runtime to customize the behavior of a program
+
+Annotations are a form of an interface where the keyword interface is preceded by @, and whose body contains annotation type element declarations that look very similar to methods:
+```java
+public @interface SimpleAnnotation {
+    String value();
+
+    int[] types();
+}
+```
+After the annotation is defined, yon can start using it in through your code:
+```java
+@SimpleAnnotation(value = "an element", types = 1)
+public class Element {
+    @SimpleAnnotation(value = "an attribute", types = { 1, 2 })
+    public Element nextElement;
+}
+```
+
+[back to the table of contents](#basic-java-interview-questions)
+
+## 30. What is immutable class?
+
+Immutable objects are those objects whose state can not be changed once created. 
+Class whose objects possess this characteristic can be termed as immutable class.
+For example : String , Integer.
+Immutable classes are thread safe because you can not change state of immutable objects, 
+so even if two thread access immutable object in parallel, it won’t create any issue.
+
+To create an immutable class in java, you have to do following steps.
++ Declare the class as final so it can’t be extended.
++ Make all fields private so that direct access is not allowed.
++ Don’t provide setter methods for variables
++ Make all mutable fields final so that it’s value can be assigned only once.
++ Initialize all the fields via a constructor performing deep copy.
++ Perform cloning of objects in the getter methods to return a copy rather than returning the actual object reference.
 
 [back to the table of contents](#basic-java-interview-questions)

@@ -1,5 +1,7 @@
-# java-interview
+# Java-Interview-Questions
 
-+ [basic java interview question](questions/basic.md#basic-java-interview-questions)
-+ [pattern interview question](questions/patterns.md#patterns-java-interview-questions)
-+ [spring interview question](questions/spring.md#spring-java-interview-questions)
++ [Basic Java Interview Questions](questions/basic.md#basic-java-interview-questions)
++ [Pattern Interview Questions](questions/patterns.md#patterns-java-interview-questions)
++ [Spring Interview Questions](questions/spring.md#spring-java-interview-questions)
++ [Java Concurrency Interview Questions](questions/concurrency.md#java-concurrency-interview-questions)
++ [Memory Management in Java Interview Questions](questions/java-memory-managment.md#memory-management-in-java-interview-questions)

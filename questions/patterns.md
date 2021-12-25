@@ -1,10 +1,10 @@
-# patterns java interview questions
+# Patterns Java Interview Questions
 
 In software engineering, a Design Pattern describes an established solution to the most 
 commonly encountered problems in software design. 
 
 + [Creation patterns](#creational-patterns)
-    + [Singelton](#singleton-design-pattern)
+    + [Singleton](#singleton-design-pattern)
     + [Factory](#factory-design-pattern)
     + [Abstract factory](#abstract-factory-design-pattern)
     + [Builder](#builder-design-pattern)

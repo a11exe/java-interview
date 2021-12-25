@@ -1,4 +1,4 @@
-# basic java interview questions
+# Basic Java Interview Questions
 
 + [1. What is Java? What are the features of Java?](#1-what-is-java-what-are-features-of-java)
 + [2. What are the OOPs concepts?](#2-what-are-the-oops-concepts)
